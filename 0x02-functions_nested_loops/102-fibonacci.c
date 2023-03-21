@@ -6,22 +6,18 @@
  */
 int main(void)
 {
-	int n1 = 1;
-	int n2 = 2;
+	long int n1 = 1, n2 = 2, n;
 	int i;
-	int fibonacci_list[50];
 
-	fibonacci_list[0] = n1;
-	fibonacci_list[1] = n2;
-
-	for (i = 2; i < 50; i++)
+	for (i = 0; i < 50; i++)
 	{
-		fibonacci_list[i] = fibonacci_list[i - 1] + fibonacci_list[i - 2];
+		n = n1 + n2;
+		n1 = n2;
+		n2 = n;
+		printf("%lu", n);
+		if (i < 49)
+			printf(", ");
 	}
-	for (i = 0; i < 49; i++)
-	{
-		printf("%d, ", fibonacci_list[i]);
-	}
-	printf("%d\n", fibonacci_list[49]);
+	printf("\n");
 	return (0);
 }
