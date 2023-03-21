@@ -8,15 +8,14 @@ int main(void)
 {
 	int n1 = 1;
 	int n2 = 2;
-	int n, i;
-	int fibonacci_list[50] = {n1, n2};
+	int n, i, int fibonacci_list[50];
+
+	fibonacci_list[0] = n1;
+	fibonacci_list[1] = n2;
 
 	for (i = 2; i < 50; i++)
 	{
-		n = n1 + n2;
-		n1 = n2;
-		n2 = n;
-		fibonacci_list[i] = n;
+		fibonacci_list[i] = fibonacci_list[i - 1] + fibonacci_list[i - 2];
 	}
 	for (i = 0; i < 49; i++)
 	{
