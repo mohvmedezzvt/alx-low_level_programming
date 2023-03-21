@@ -8,7 +8,8 @@ int main(void)
 {
 	int n1 = 1;
 	int n2 = 2;
-	int n, i, int fibonacci_list[50];
+	int i;
+	int fibonacci_list[50];
 
 	fibonacci_list[0] = n1;
 	fibonacci_list[1] = n2;
