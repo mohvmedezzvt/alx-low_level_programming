@@ -8,20 +8,20 @@
  */
 int main(void)
 {
-	unsigned long i;
-	unsigned long n1 = 0, n2 = 1, n;
+	int i;
+	long int n1 = 1, n2 = 2, n, sum = 0;
 
-	for (i = 0; i < 4000000; i++)
+	for (i = 1; i <= 4000000; i++)
 	{
-		n = n1 + n2;
-		if (n % 2 == 0)
+		if (n2 % 2 == 0)
 		{
-			printf("%lu", n);
-			if (i == 4000000)
-				printf("\n");
-			else
-				printf(", ");
+			sum += n2;
 		}
+
+		n = n1 + n2;
+		n1 = n2;
+		n2 = n;
 	}
+	printf("%ld\n", sum);
 	return (0);
 }
