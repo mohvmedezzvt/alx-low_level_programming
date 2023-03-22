@@ -11,7 +11,7 @@ int main(void)
 	int i;
 	long int n1 = 1, n2 = 2, n, sum = 0;
 
-	for (i = 1; i <= 4000000; i++)
+	for (i = 1; i <= 33; i++)
 	{
 		if (n2 % 2 == 0)
 		{
