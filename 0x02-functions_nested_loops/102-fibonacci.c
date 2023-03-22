@@ -6,19 +6,20 @@
  */
 int main(void)
 {
-	long long n1 = 1, n2 = 2, n;
 	int i;
+	unsigned long n1 = 0, n2 = 1, n;
 
-	printf("%lld, %lld, ", n1, n2);
 	for (i = 0; i < 50; i++)
 	{
 		n = n1 + n2;
+		printf("%lu", n);
 		n1 = n2;
 		n2 = n;
-		printf("%lld", n);
-		if (i < 49)
+
+		if (i == 49)
+			printf("\n");
+		else
 			printf(", ");
 	}
-	printf("\n");
 	return (0);
 }
