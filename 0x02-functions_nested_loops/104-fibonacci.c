@@ -13,14 +13,14 @@ int main(void)
 	long int n1 = 1, n2 = 2, n;
 
 	printf("%ld, %ld, ", n1, n2);
-	for (i = 1; i <= 98; i++)
+	for (i = 1; i <= 96; i++)
 	{
 		n = n1 + n2;
 		n1 = n2;
 		n2 = n;
 		printf("%ld", n);
 
-		if (i == 98)
+		if (i == 96)
 			printf("\n");
 		else
 			printf(", ");
