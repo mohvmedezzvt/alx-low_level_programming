@@ -17,13 +17,13 @@ void print_triangle(int size)
 		{
 			if (j < size - 1)
 			{
-				printf(" ");
+				_putchar(' ');
 			}
 			else
 			{
-				printf("#");
+				_putchar('#');
 			}
 		}
-		printf("\n");
+		_putchar('\n');
 	}
 }
