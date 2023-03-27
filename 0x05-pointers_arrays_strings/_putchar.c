@@ -8,7 +8,7 @@
  * Return: On success, returns the character written as an unsigned char.
  *         On failure, returns -1 and sets errno appropriately.
  */
-void _putchar(char c)
+int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
