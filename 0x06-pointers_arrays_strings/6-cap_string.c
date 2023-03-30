@@ -4,16 +4,16 @@
 /**
  * *cap_string - a function that capitalizes all words of a string.
  * @s: the string will be capitalized it words.
- * 
+ *
  * Return: the string would be capitalized it words.
  */
 char *cap_string(char *s)
 {
 	int i = 0;
-	
+
 	while (s[i])
 	{
-		while(!(s[i] >= 'a' && s[i] <= 'z'))
+		while (!(s[i] >= 'a' && s[i] <= 'z'))
 		{
 			i++;
 		}
