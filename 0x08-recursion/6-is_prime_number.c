@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * is_prime_number - a function that returns 1 if the input integer is a prime number,
+ * is_prime_number - returns 1 if the input integer is a prime number,
  * otherwise return 0.
  * @n: the number to check if it is prime or not.
  *
@@ -13,11 +13,11 @@ int is_prime_number(int n)
 }
 
 /**
- * is_prime_helper - 
- * @n: 
- * @i: 
+ * is_prime_helper - a recursive helper function to check if a number is prime.
+ * @n: the number to check.
+ * @i: the divisor to check if n is divisible by.
  *
- * Return: 
+ * Return: 1 if the number is a prime, 0 otherwise.
  */
 int is_prime_helper(int n, int i)
 {
