@@ -15,4 +15,5 @@ int is_palindrome(char *s);
 int is_palindrome_strlen(char *s);
 int is_palindrome_helper(char *s, int left, int right);
 
+
 #endif /* MAIN_H */
