@@ -8,6 +8,3 @@ ar rcs liball.a *.o
 
 # Index the library
 ranlib liball.a
-
-# Remove the object files
-rm *.o
