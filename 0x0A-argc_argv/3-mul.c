@@ -2,10 +2,13 @@
 #include <stdlib.h>
 
 /**
- * Mulriplies two integers passed as command-line argumens and prints the result.
- * Uses the atoi function from the standard library to cinvert the arguments to integers.
+ * main - Mulriplies two integers passed as command-line argumens
+ * and prints the result.
+ * Uses the atoi function from the standard library
+ * to cinvert the arguments to integers.
  *
- * @argc: the number of command-line arguments, including the name of the program.
+ * @argc: the number of command-line arguments,
+ * including the name of the program.
  * @argv: an array of strings containing the command-line arguments.
  *
  * Return: 0 if the program runs successfully, 1 if an error occurs.
