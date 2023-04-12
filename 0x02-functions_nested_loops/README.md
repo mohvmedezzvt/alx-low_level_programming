@@ -53,6 +53,6 @@ Here are the descriptions of all the files in this directory:
     A program that finds and prints the sum of the even-valued terms of the Fibonacci sequence whose values do not exceed 4,000,000, followed by a new line to the standard output.
 
 ## Author
-Mohamed Ezzat
+These programs were written by Mohamed Ezzat as part of the ALX Software Engineering program.
 
 [LinkedIn Profile](https://www.linkedin.com/in/mohamed-ezzat01/) | [GitHub Profile](https://github.com/mohvmedezzvt)
