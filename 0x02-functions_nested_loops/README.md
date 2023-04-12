@@ -4,7 +4,7 @@ This folder contains C programs for practicing functions and nested loops in C p
 ## Files
 Here are the descriptions of all the files in this directory:
 
-- ### 0-holberton.c
+- ### 0-_putchar.c
     A program that prints the string Holberton, followed by a new line to the standard output.
 
 - ### 1-alphabet.c
