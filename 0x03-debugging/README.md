@@ -2,8 +2,8 @@
 In this folder, you will find solutions to debugging exercises.
 
 ## Requirements
-- All files are compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
-- All files are tested using the program Holberton school created Betty, version 1.0.x
+- All files are compiled on `Ubuntu 20.04 LTS` using `gcc`, using the options `-Wall -Werror -Wextra -pedantic -std=gnu89`
+- All files are tested using the program Holberton school created `Betty`, version `1.0.x`
 
 ## Files
 The following files are the solutions to debugging exercises:
