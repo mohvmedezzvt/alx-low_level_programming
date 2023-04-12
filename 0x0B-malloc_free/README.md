@@ -1,5 +1,5 @@
 # 0x0B. C - malloc, free
-This directory contains programs that demonstrate the use of dynamic memory allocation in C, specifically using the malloc, free, and realloc functions.
+This directory contains programs that demonstrate the use of dynamic memory allocation in C, specifically using the malloc, free functions.
 
 ## Files
 - 0-create_array.c: A function that creates an array of characters, initializes it with a specific character, and returns a pointer to the array.
