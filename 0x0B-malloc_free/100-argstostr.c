@@ -25,10 +25,10 @@ char *argstostr(int ac, char **av)
 		while (av[i][len])
 			len++;
 
-		total_len += len;
+		total_len += len + 1;
 	}
 
-	str = malloc(sizeof(char) * total_len);
+	str = malloc(sizeof(char) * (total_len + (ac - 1)));
 
 	if (str == NULL)
 		return (NULL);
