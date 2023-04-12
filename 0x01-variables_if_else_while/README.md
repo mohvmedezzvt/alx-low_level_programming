@@ -50,4 +50,6 @@ The following is a list of all the programs in this directory with a brief summa
     This program prints all possible combinations of two two-digit numbers.
 
 ## Author
-These programs were written by [Mohamed Ezzat](https://github.com/mohvmedezzvt) as part of the ALX Software Engineering program.
+These programs were written by Mohamed Ezzat as part of the ALX Software Engineering program.
+
+[LinkedIn Profile](https://www.linkedin.com/in/mohamed-ezzat01/) | [GitHub Profile](https://github.com/mohvmedezzvt)
