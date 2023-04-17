@@ -8,7 +8,8 @@
  * @age: age of the dog.
  * @owner: owner of the dog.
  *
- * Description: struct called "dog" that stores the name, age, and owner of a dog
+ * Description: struct called "dog" that stores
+ * the name, age, and owner of a dog
 */
 struct dog
 {
