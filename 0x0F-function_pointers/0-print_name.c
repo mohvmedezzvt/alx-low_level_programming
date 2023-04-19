@@ -1,6 +1,3 @@
-#include <stddef.h>
-#include "function_pointers.h"
-
 /**
  * print_name - Calls the function pointed to by f,
  * passing name as an argument
