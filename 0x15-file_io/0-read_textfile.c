@@ -12,6 +12,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	FILE *fptr;
 	char *buffer;
 	ssize_t lettersRead, lettersWriten;
+	struct stat fileStat;
 
 	if (filename == NULL)
 		return (0);
@@ -34,11 +35,18 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	buffer[lettersRead] = '\0';
-	fclose(fptr);
+	if (fstat(fileno(fptr), &fileStat) == -1)
+	{
+		fclose(fptr);
+		return (0);
+	}
 
-	lettersWriten = fprintf(stderr, "%s", buffer);
+	if (fileStat.st_mode & S_IRUSR)
+		lettersWriten = fwrite(buffer, sizeof(char), lettersRead, stdout);
+	else
+		lettersWriten = fwrite(buffer, sizeof(char), lettersRead, stderr);
+	fclose(fptr);
 	if (lettersWriten < lettersRead)
 		return (0);
-
 	return (lettersWriten);
 }
