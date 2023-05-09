@@ -9,22 +9,25 @@
 */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	FILE *fptr;
-	int result = -1;
+	int fdescriptor, result = -1;
+	size_t len = 0;
 
 	if (filename == NULL)
 		return (-1);
 
-	fptr = fopen(filename, "a");
-	if (fptr == NULL)
+	fdescriptor = open(filename, O_WRONLY | O_APPEND);
+	if (fdescriptor == -1)
 		return (-1);
 
 	if (text_content != NULL)
 	{
-		if (fputs(text_content, fptr) != EOF)
+		while (text_content[len])
+			len++;
+
+		if (write(fdescriptor, text_content, len) != -1)
 			result = 1;
 	}
 
-	fclose(fptr);
+	close(fdescriptor);
 	return (result);
 }
