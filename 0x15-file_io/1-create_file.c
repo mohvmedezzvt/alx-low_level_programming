@@ -9,7 +9,8 @@
 */
 int create_file(const char *filename, char *text_content)
 {
-	int fdescriptor, resultWrite, resultClose;
+	int fdescriptor, resultClose;
+	size_t resultWrite;
 
 	if (filename == NULL)
 		return (-1);
@@ -21,7 +22,7 @@ int create_file(const char *filename, char *text_content)
 	if (text_content != NULL)
 	{
 		resultWrite = write(fdescriptor, text_content, strlen(text_content));
-		if (resultWrite == -1)
+		if (resultWrite != strlen(text_content))
 		{
 			close(fdescriptor);
 			return (-1);
@@ -32,5 +33,5 @@ int create_file(const char *filename, char *text_content)
 	if (resultClose == -1)
 		return (-1);
 
-	return (-1);
+	return (1);
 }
