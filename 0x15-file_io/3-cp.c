@@ -39,6 +39,11 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 	}
+	if (bytes_read == -1)
+	{
+		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
 
 	errorchecking(bytes_read, fdescriptor_from, fdescriptor_to, argv[1]);
 	return (0);
