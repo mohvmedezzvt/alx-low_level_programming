@@ -9,8 +9,7 @@
 */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int fdescriptor;
-	size_t letterswritten;
+	int fdescriptor, letterswritten;
 
 	if (filename == NULL)
 		return (-1);
@@ -22,7 +21,7 @@ int append_text_to_file(const char *filename, char *text_content)
 	if (text_content != NULL)
 	{
 		letterswritten = write(fdescriptor, text_content, strlen(text_content));
-		if (letterswritten != strlen(text_content))
+		if (letterswritten == -1)
 		{
 			close(fdescriptor);
 			return (-1);
