@@ -30,20 +30,21 @@ int main(int argc, char *argv[])
 		dprintf(2, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	while ((bytes_read = read(fdescriptor_from, buff, sizeof(buff))) > 0)
-	{
+	do {
+		bytes_read = read(fdescriptor_from, buff, sizeof(buff));
+		if (bytes_read < 0 || fdescriptor_from < 0)
+		{
+			dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+			exit(98);
+		}
+
 		bytes_written = write(fdescriptor_to, buff, bytes_read);
-		if (bytes_written == -1)
+		if (fdescriptor_to < 0 || bytes_written < 0)
 		{
 			dprintf(2, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
-	}
-	if (bytes_read == -1)
-	{
-		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
+	} while (bytes_read);
 
 	errorchecking(bytes_read, fdescriptor_from, fdescriptor_to, argv[1]);
 	return (0);
