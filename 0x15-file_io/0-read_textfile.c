@@ -9,44 +9,35 @@
 */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	FILE *fptr;
+	int fdescriptor;
 	char *buffer;
 	ssize_t lettersRead, lettersWriten;
-	struct stat fileStat;
 
 	if (filename == NULL)
 		return (0);
 
-	fptr = fopen(filename, "r");
-	if (fptr == NULL)
+	fdescriptor = open(filename, O_RDONLY);
+	if (fdescriptor == -1)
 		return (0);
 
 	buffer = malloc((letters + 1) * sizeof(char));
 	if (buffer == NULL)
 	{
-		fclose(fptr);
+		close(fdescriptor);
 		return (0);
 	}
 
-	lettersRead = fread(buffer, sizeof(char), letters, fptr);
-	if (lettersRead == 0)
+	lettersRead = read(fdescriptor, buffer, letters);
+	lettersWriten = write(STDOUT_FILENO, buffer, lettersRead);
+
+	if (lettersRead != lettersWriten)
 	{
-		fclose(fptr);
-		return (0);
-	}
-	buffer[lettersRead] = '\0';
-	if (fstat(fileno(fptr), &fileStat) == -1)
-	{
-		fclose(fptr);
+		free(buffer);
+		close(fdescriptor);
 		return (0);
 	}
 
-	if (fileStat.st_mode & S_IRUSR)
-		lettersWriten = fwrite(buffer, sizeof(char), lettersRead, stdout);
-	else
-		lettersWriten = fwrite(buffer, sizeof(char), lettersRead, stderr);
-	fclose(fptr);
-	if (lettersWriten < lettersRead)
-		return (0);
+	free(buffer);
+	close(fdescriptor);
 	return (lettersWriten);
 }
