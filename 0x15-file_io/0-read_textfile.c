@@ -36,7 +36,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buffer[lettersRead] = '\0';
 	fclose(fptr);
 
-	lettersWriten = printf("%s", buffer);
+	lettersWriten = fprintf(stderr, "%s", buffer);
 	if (lettersWriten < lettersRead)
 		return (0);
 
