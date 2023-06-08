@@ -14,5 +14,6 @@ int is_prime_helper(int n, int divisor);
 int is_palindrome(char *s);
 int is_palindrome_strlen(char *s);
 int is_palindrome_helper(char *s, int left, int right);
+int wildcmp(char *s1, char *s2);
 
 #endif /* MAIN_H */
