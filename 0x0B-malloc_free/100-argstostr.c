@@ -23,6 +23,7 @@ char *argstostr(int ac, char **av)
 			len++;
 			j++;
 		}
+		len++;
 	}
 
 	concatenated = (char *)malloc(sizeof(char) * (len + 1));
