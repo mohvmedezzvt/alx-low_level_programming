@@ -14,7 +14,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	array = (void *)malloc(size * nmemb);
+	array = (void *)malloc(sizeof(size) * nmemb);
 	if (array == NULL)
 		return (NULL);
 
