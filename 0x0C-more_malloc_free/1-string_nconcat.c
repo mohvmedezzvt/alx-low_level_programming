@@ -22,7 +22,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	while (s1[len1])
 		len1++;
 
-	while (s2[len2] && len2 <= n)
+	while (s2[len2] && len2 < n)
 		len2++;
 
 	concatenated = (char *)malloc(sizeof(char) * (len1 + len2 + 1));
