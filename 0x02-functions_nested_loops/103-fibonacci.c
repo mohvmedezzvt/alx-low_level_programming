@@ -8,20 +8,18 @@
  */
 int main(void)
 {
-	int i;
-	long int n1 = 1, n2 = 2, n, sum = 0;
+	int n1 = 1, n2 = 2, n, sum = 0;
 
-	for (i = 1; i <= 33; i++)
+	while (n1 <= 4000000)
 	{
-		if (n2 % 2 == 0)
-		{
-			sum += n2;
-		}
+		if (n1 % 2 == 0)
+			sum += n1;
 
-		n = n1 + n2;
-		n1 = n2;
-		n2 = n;
+	n = n1 + n2;
+	n1 = n2;
+	n2 = n;
 	}
-	printf("%ld\n", sum);
+
+	printf("%d\n", sum);
 	return (0);
 }
