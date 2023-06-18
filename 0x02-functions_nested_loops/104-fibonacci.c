@@ -10,20 +10,16 @@
 int main(void)
 {
 	int i;
-	long int n1 = 1, n2 = 2, n;
+	unsigned int n1 = 1, n2 = 2, n;
 
-	printf("%ld, %ld, ", n1, n2);
-	for (i = 1; i <= 96; i++)
+	printf("%u, %u", n1, n2);
+	for (i = 3; i <= 98; i++)
 	{
 		n = n1 + n2;
+		printf(", %u", n);
 		n1 = n2;
 		n2 = n;
-		printf("%ld", n);
-
-		if (i == 96)
-			printf("\n");
-		else
-			printf(", ");
 	}
+	printf("\n");
 	return (0);
 }
