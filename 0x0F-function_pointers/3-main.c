@@ -23,12 +23,11 @@ int main(int argc, char **argv)
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
 
-	if (num2 == 0 && (strcmp(argv[2], "/") == 0 || strcmp(argv[2], "%") == 0))
+	if (num2 == 0 && (*argv[2], "/" == 0 || *argv[2], "%" == 0))
 	{
 		printf("Error\n");
 		exit(100);
 	}
-
 
 	f = get_op_func(argv[2]);
 	if (!f || argv[2][1])

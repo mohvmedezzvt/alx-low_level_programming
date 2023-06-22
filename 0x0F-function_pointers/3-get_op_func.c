@@ -1,5 +1,5 @@
-#include "3-calc.h"
 #include <stdlib.h>
+#include "3-calc.h"
 
 /**
  * get_op_func - Selects the corresponding function based on the operator.
