@@ -2,7 +2,8 @@
 #include <stdio.h>
 
 /**
- * print_strings - Prints a variable number of strings, separated by a given separator.
+ * print_strings - Prints a variable number of strings,
+ * separated by a given separator.
  * @separator: The separator string to be printed between the strings.
  * @n: The number of strings to be printed.
  * @...: The variable arguments representing the strings.
