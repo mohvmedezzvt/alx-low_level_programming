@@ -1,16 +1,19 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 /**
- * main - Entry point.
- * @argc: arguments count.
- * @argv: arguments vector.
+ * main - prints the opcodes of its own main function.
+ * @argc: The number of command-line arguments.
+ * @argv: An array of strings containing the command-line arguments.
  *
- * Return: 0.
-*/
-int main(int argc, char *argv)
+ * Return: 0 upon successful execution,
+ *         or the corresponding exit code in case of an error.
+ */
+int main(int argc, char **argv)
 {
-	int num;
+	int num, i;
+	unsigned char *main_address;
 
 	if (argc != 2)
 	{
@@ -24,6 +27,12 @@ int main(int argc, char *argv)
 		printf("Error\n");
 		exit(2);
 	}
+
+	main_address = (unsigned char *)main;
+	for (i = 0; i < num; i++)
+		printf("%02x ", main_address[i]);
+
+	printf("\n");
 
 	return (0);
 }
