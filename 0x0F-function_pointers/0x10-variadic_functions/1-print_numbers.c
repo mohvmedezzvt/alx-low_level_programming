@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 /**
- * print_numbers - prints numbers, followed by a new line.
- * @separator: a separator to print it between numbers.
- * @n: the number of numbers.
+ * print_numbers - Prints a variable number of numbers, separated by a given separator.
+ * @separator: The separator string to be printed between the numbers.
+ * @n: The number of numbers to be printed.
  *
  * Return: Void.
 */
