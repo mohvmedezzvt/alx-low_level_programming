@@ -5,6 +5,7 @@
  * print_numbers - Prints a variable number of numbers, separated by a given separator.
  * @separator: The separator string to be printed between the numbers.
  * @n: The number of numbers to be printed.
+ * @...: The variable arguments representing the numbers.
  *
  * Return: Void.
 */
