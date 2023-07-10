@@ -11,7 +11,7 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int fd;
+	int fd, close_result;
 	size_t bytes_writen;
 
 	if (filename == NULL)
@@ -31,6 +31,9 @@ int create_file(const char *filename, char *text_content)
 		}
 	}
 
-	close(fd);
+	close_result = close(fd);
+	if (close_result == -1)
+		return (-1);
+
 	return (1);
 }
